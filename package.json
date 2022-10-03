@@ -1,14 +1,12 @@
 {
-  "name": "nextjs-tailwind-beautiful-blog-template",
+  "name": "okiedesign",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "lint": "next lint",
-    "serve": "next serve",
-    "deploy": "gh-pages -d out -t true"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.2",
@@ -30,7 +28,7 @@
     "react-div-100vh": "^0.7.0",
     "react-loading-skeleton": "^3.1.0",
     "remark-frontmatter": "3.0.0",
-    "okiedesign": "^1.4.9"
+    "okiedesign": "1.4.9"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.0",

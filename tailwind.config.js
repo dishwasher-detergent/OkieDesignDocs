@@ -11,17 +11,18 @@ module.exports = {
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/line-clamp"),
-    require("okiedesign")
+    require('okiedesign')
   ],
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
   theme: {
-    extend: {
-      colors: {
-        primary: colors.purple,
-      },
+    colors: {
+      primary: colors.purple,
+      success: colors.emerald,
+      warning: colors.amber,
+      emergency: colors.red,
     },
   },
 };
