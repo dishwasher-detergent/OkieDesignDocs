@@ -1,0 +1,22 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  font-family: "Nunito", sans-serif;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 75ms;
+}
+
+*::-webkit-scrollbar {
+  @apply h-1.5 w-1.5;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-slate-200 dark:bg-slate-800;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-slate-400 dark:bg-slate-600;
+}
