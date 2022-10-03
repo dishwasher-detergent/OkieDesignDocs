@@ -18,11 +18,13 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   theme: {
-    colors: {
-      primary: colors.purple,
-      success: colors.emerald,
-      warning: colors.amber,
-      emergency: colors.red,
+    extend: {
+      colors: {
+        primary: colors.purple,
+        success: colors.emerald,
+        warning: colors.amber,
+        emergency: colors.red,
+      },
     },
   },
 };
