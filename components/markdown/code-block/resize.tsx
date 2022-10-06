@@ -11,51 +11,51 @@ const Responsive = ({ children, size }: ResponsiveProps) => {
         className="overflow-x-hiddentransition-all w-full overflow-y-auto bg-white dark:bg-slate-900"
       >
         <iframe
-          className="h-full w-full overflow-hidden"
-          /* @ts-ignore */
-          srcDoc={`
-            <html class="flex w-full h-full ">
-              <head>
-                  <meta charset="utf-8">
-                  <title>Component Preview</title>
-                  <script src="https://cdn.tailwindcss.com"></script>
-                  <link rel="stylesheet" href="https://raw.githubusercontent.com/dishwasher-detergent/OkieDesign/main/dist/components.css">
+          aria-label="component preview"
+          title="component preview"
+          srcDoc='<html class="flex w-full h-full ">
+                <head>
+                    <meta charset="utf-8">
+                    <title>Component Preview </title>
+                    <link rel="stylesheet" href="https://www.okie.design/_next/static/css/d305a89cfe0fb39f.css" /> 
+                    <style>
+                        .hide { display: none !important; }
+                    </style>
+                    <script src="https://cdn.tailwindcss.com"></script>
 
-                  <script>
-                      tailwind.config = {
-                          darkMode: 'class',
-                          plugins: [
-                            require("okiedesign"),
-                          ],
-                      }
+                    <script>
+                        tailwind.config = {
+                            darkMode: class
+                        };
 
-                      function test() {
-                          var links = document.querySelectorAll("a");
+                        function test() {
+                            var links = document.querySelectorAll("a");
 
-                          for (var index = 0; index < links.length; index++) {
-                              links[index].removeAttribute('href');
-                          }
-                      }
-                  </script>
+                            for (var index = 0; index < links.length; index++) {
+                                links[index].removeAttribute(&apos;href&apos;);
+                            }
+                        }
+                    </script>
 
-                  <style>
-                      a {
-                          cursor: pointer;
-                      }
-                  </style>
-              </head>
-              <body
-                  onload="test();"
-                  style="height: min-content;"
-                  dir="ltr"
-                  class="flex items-center flex-1 w-full min-h-full "
-              >
-                    ${children}
-                  </main>
-              </body>
-            </html>
-          `}
-        />
+                    <style>
+                        a {
+                            cursor: pointer;
+                        }
+                    </style>
+                </head>
+                <body
+                    onLoad="test();"
+                    style="height: min-content;"
+                    class="flex items-center flex-1 w-full min-h-full "
+                >
+                    <main class="mx-auto">
+                        <div class="badge success">Success</div>
+                    </main>
+                </body>
+            </html>'
+          className="h-full w-full resize-x border-0"
+          style={{ maxWidth: size + "px" }}
+        ></iframe>
       </div>
     </div>
   );
