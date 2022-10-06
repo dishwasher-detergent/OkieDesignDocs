@@ -17,7 +17,7 @@ const Responsive = ({ children, size }: ResponsiveProps) => {
                 <head>
                     <meta charset="utf-8">
                     <title>Component Preview </title>
-                    <link rel="stylesheet" href="https://www.okie.design/_next/static/css/d305a89cfe0fb39f.css" /> 
+                    <link rel="stylesheet" href="https://dishwasher-detergent.github.io/OkieDesign/dist/components_css.css" /> 
                     <style>
                         .hide { display: none !important; }
                     </style>
@@ -48,13 +48,12 @@ const Responsive = ({ children, size }: ResponsiveProps) => {
                     style="height: min-content;"
                     class="flex items-center flex-1 w-full min-h-full "
                 >
-                    <main class="mx-auto">
+                    <main class="mx-auto w-full h-full">
                         ${children}
                     </main>
                 </body>
             </html>`}
           className="h-full w-full border-0"
-          style={{ maxWidth: size + "px" }}
         ></iframe>
       </div>
     </div>
