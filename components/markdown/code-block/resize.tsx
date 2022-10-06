@@ -48,7 +48,7 @@ const Responsive = ({ children, size }: ResponsiveProps) => {
                     style="height: min-content;"
                     class="flex items-center flex-1 w-full min-h-full "
                 >
-                    <main class="mx-auto w-full h-full">
+                    <main class="mx-auto w-full h-full flex gap-2 p-2">
                         ${children}
                     </main>
                 </body>
