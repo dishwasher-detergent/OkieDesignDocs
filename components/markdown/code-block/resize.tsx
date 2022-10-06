@@ -8,12 +8,12 @@ const Responsive = ({ children, size }: ResponsiveProps) => {
     <div className="mb-2 flex items-center justify-center overflow-hidden rounded-md border border-slate-300 bg-slate-100 dark:border-slate-700 dark:bg-slate-800">
       <div
         style={{ maxWidth: size + "px" }}
-        className="overflow-x-hiddentransition-all w-full overflow-y-auto bg-white dark:bg-slate-900"
+        className="w-full overflow-y-auto overflow-x-hidden bg-white transition-all dark:bg-slate-900"
       >
         <iframe
           aria-label="component preview"
           title="component preview"
-          srcDoc='<html class="flex w-full h-full ">
+          srcDoc={`<html class="flex w-full h-full ">
                 <head>
                     <meta charset="utf-8">
                     <title>Component Preview </title>
@@ -49,10 +49,10 @@ const Responsive = ({ children, size }: ResponsiveProps) => {
                     class="flex items-center flex-1 w-full min-h-full "
                 >
                     <main class="mx-auto">
-                        <div class="badge success">Success</div>
+                        ${children}
                     </main>
                 </body>
-            </html>'
+            </html>`}
           className="h-full w-full resize-x border-0"
           style={{ maxWidth: size + "px" }}
         ></iframe>
