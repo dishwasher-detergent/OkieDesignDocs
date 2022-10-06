@@ -23,6 +23,9 @@ const Responsive = ({ children, size }: ResponsiveProps) => {
                   <script>
                       tailwind.config = {
                           darkMode: 'class',
+                          plugins: [
+                            require("okiedesign"),
+                          ],
                       }
 
                       function test() {
