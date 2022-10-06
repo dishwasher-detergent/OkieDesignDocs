@@ -19,6 +19,7 @@ const Responsive = ({ children, size }: ResponsiveProps) => {
                   <meta charset="utf-8">
                   <title>Component Preview</title>
                   <script src="https://cdn.tailwindcss.com"></script>
+                  <link rel="stylesheet" href="https://raw.githubusercontent.com/dishwasher-detergent/OkieDesign/main/dist/components.css">
 
                   <script>
                       tailwind.config = {
