@@ -5,7 +5,7 @@ interface ResponsiveProps {
 
 const Responsive = ({ children, size }: ResponsiveProps) => {
   return (
-    <div className="mb-2 flex items-center justify-center overflow-hidden rounded-md border border-slate-300 bg-slate-100 dark:border-slate-700 dark:bg-slate-800">
+    <div className="h-[36rem] mb-2 flex items-center justify-center overflow-hidden rounded-md border border-slate-300 bg-slate-100 dark:border-slate-700 dark:bg-slate-800">
       <div
         style={{ maxWidth: size + "px" }}
         className="w-full overflow-y-auto overflow-x-hidden bg-white transition-all dark:bg-slate-900"
@@ -46,9 +46,9 @@ const Responsive = ({ children, size }: ResponsiveProps) => {
                 <body
                     onLoad="test();"
                     style="height: min-content;"
-                    class="flex items-center flex-1 w-full min-h-full "
+                    class="w-full min-h-full"
                 >
-                    <main class="mx-auto w-full h-full flex gap-2 p-2">
+                    <main class="flex flex-row flex-wrap gap-2 p-4 items-center justify-center">
                         ${children}
                     </main>
                 </body>
