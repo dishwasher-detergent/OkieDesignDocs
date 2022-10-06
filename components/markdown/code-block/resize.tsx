@@ -53,7 +53,7 @@ const Responsive = ({ children, size }: ResponsiveProps) => {
                     </main>
                 </body>
             </html>`}
-          className="h-full w-full resize-x border-0"
+          className="h-full w-full border-0"
           style={{ maxWidth: size + "px" }}
         ></iframe>
       </div>
