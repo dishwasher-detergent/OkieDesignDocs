@@ -5,10 +5,10 @@ interface ResponsiveProps {
 
 const Responsive = ({ children, size }: ResponsiveProps) => {
   return (
-    <div className="mb-2 flex h-[30rem] items-center justify-center overflow-hidden rounded-md border border-slate-300 bg-slate-100 dark:border-slate-700 dark:bg-slate-800">
+    <div className="mb-2 flex items-center justify-center overflow-hidden rounded-md border border-slate-300 bg-slate-100 dark:border-slate-700 dark:bg-slate-800">
       <div
         style={{ maxWidth: size + "px" }}
-        className="w-full overflow-y-auto overflow-x-hidden bg-white transition-all dark:bg-slate-900"
+        className="overflow-x-hiddentransition-all w-full overflow-y-auto bg-white dark:bg-slate-900"
       >
         <iframe
           className="h-full w-full overflow-hidden"
