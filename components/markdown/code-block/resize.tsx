@@ -1,9 +1,10 @@
 interface ResponsiveProps {
   children: React.ReactChild;
   size?: number;
+  dark?: boolean;
 }
 
-const Responsive = ({ children, size }: ResponsiveProps) => {
+const Responsive = ({ children, size, dark }: ResponsiveProps) => {
   return (
     <div className="mb-2 flex h-[30rem] items-center justify-center overflow-hidden rounded-md border border-slate-300 bg-slate-100 dark:border-slate-700 dark:bg-slate-800">
       <div
@@ -13,7 +14,7 @@ const Responsive = ({ children, size }: ResponsiveProps) => {
         <iframe
           aria-label="component preview"
           title="component preview"
-          srcDoc={`<html class="flex w-full h-full ">
+          srcDoc={`<html class="flex w-full h-full ${dark && "dark"}">
                 <head>
                     <meta charset="utf-8">
                     <title>Component Preview </title>

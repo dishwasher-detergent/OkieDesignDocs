@@ -22,8 +22,8 @@ const ArticleSidebar = ({ data }: Props) => {
                 <p className="w-full rounded-md bg-primary-300/20 px-2 py-1.5 font-bold text-primary-500">
                   On this page
                 </p>
-                <nav className="px-2 dark:text-white">
-                  <ul className="space-y-3">
+                <nav className="px-4 pt-2 dark:text-white">
+                  <ul>
                     {data.map((item: any) => {
                       if (item.level > 3) return;
                       return (
@@ -34,7 +34,7 @@ const ArticleSidebar = ({ data }: Props) => {
                               .trim()
                               .replace(/\s+/g, "-")
                               .toLowerCase()}`}
-                            className={`jusify-between flex w-full flex-none flex-row items-center gap-2 text-sm hover:text-primary-500 ${
+                            className={`jusify-between flex w-full flex-none flex-row items-center gap-2 hover:text-primary-500 lg:text-sm lg:leading-6 ${
                               item.level == 2 ? "pt-2 font-bold" : `pl-4`
                             }`}
                           >
