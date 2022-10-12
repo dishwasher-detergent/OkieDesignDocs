@@ -34,8 +34,8 @@ const ArticleSidebar = ({ data }: Props) => {
                               .trim()
                               .replace(/\s+/g, "-")
                               .toLowerCase()}`}
-                            className={`jusify-between flex w-full flex-none flex-row items-center gap-2 font-semibold hover:text-primary-500 ${
-                              item.level == 2 ? "text-md pt-2" : `pl-4 text-sm`
+                            className={`jusify-between flex w-full flex-none flex-row items-center gap-2 text-sm hover:text-primary-500 ${
+                              item.level == 2 ? "pt-2 font-bold" : `pl-4`
                             }`}
                           >
                             <span className="w-full truncate">{item.text}</span>
