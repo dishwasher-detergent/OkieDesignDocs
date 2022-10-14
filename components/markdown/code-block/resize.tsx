@@ -17,20 +17,17 @@ const Responsive = ({ children, size, dark }: ResponsiveProps) => {
           srcDoc={`<html class="flex w-full h-full ${dark && "dark"}">
                 <head>
                     <meta charset="utf-8">
-                    <title>Component Preview </title>
-                    <link rel="stylesheet" href="https://dishwasher-detergent.github.io/OkieDesign/dist/components_css.css" /> 
-                    <style>
-                        .hide { display: none !important; }
-                    </style>
+                    <title>Component Preview</title>
                     <script src="https://cdn.tailwindcss.com"></script>
                     <script>
                         tailwind.config = {
-                            darkMode: class
-                        };
-                        function test() {
+                            darkMode: "class"
+                        }
+
+                        function removeLink() {
                             var links = document.querySelectorAll("a");
                             for (var index = 0; index < links.length; index++) {
-                                links[index].removeAttribute(&apos;href&apos;);
+                                links[index].removeAttribute("href");
                             }
                         }
                     </script>
@@ -41,9 +38,9 @@ const Responsive = ({ children, size, dark }: ResponsiveProps) => {
                     </style>
                 </head>
                 <body
-                    onLoad="test();"
+                    onLoad="removeLink();"
                     style="height: min-content;"
-                    class="w-full min-h-full"
+                    class="w-full min-h-full dark:bg-slate-900 bg-white"
                 >
                     <main class="flex flex-row flex-wrap gap-2 p-4 items-center justify-center">
                         ${children}

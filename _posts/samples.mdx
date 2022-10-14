@@ -7,65 +7,92 @@ position: 2
 ---
 
 ```html-preview
-<div class="not-prose card horizontal fit md:h-96 w-full dark:bg-slate-900">
-    <div class="h-30 md:w-3/5 p-4 flex flex-col">
-    <div class="flex-1">
+<div class="not-prose flex w-full flex-col-reverse overflow-hidden rounded-md border border-slate-300 dark:border-slate-800 dark:bg-slate-900 md:h-96 md:flex-row">
+    <div class="h-30 flex flex-col p-4 md:w-3/5">
+        <div class="flex-1">
+            <div>
+                <div class="flex flex-row flex-nowrap items-center text-xs text-slate-600 dark:text-slate-50">
+                    <a class="rounded-md px-1 py-0.5 font-semibold hover:bg-purple-300/20 hover:text-purple-600 hover:dark:text-purple-300">
+                        Women
+                    </a>
+                    <span class="font-semibold">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="h-5 w-5"
+                        >
+                        <path
+                            fill-rule="evenodd"
+                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                            clip-rule="evenodd"
+                        />
+                        </svg>
+                    </span>
+                    <a class="rounded-md px-1 py-0.5 font-semibold text-purple-600">
+                        Coats & Jackets
+                    </a>
+                </div>
+                <div class="mt-4 mb-6">
+                    <p class="text-slate-600 dark:text-slate-200">KALVIN CLEIN</p>
+                    <h2 class="truncate text-3xl font-bold text-slate-800 dark:text-white">
+                        Women's Belted Shirt Jacket
+                    </h2>
+                    <h3 class="mt-2 text-xl font-bold text-slate-800 dark:text-white">
+                        $300.00
+                    </h3>
+                </div>
+            </div>
+        </div>
         <div>
-            <div data-content="Breadcrumbs" class="tooltip bottom">
-                <div data-content="Breadcrumbs" class="breadcrumb arrow extra_small text-slate-500">
-                    <p>Womans Wear</p>
-                    <p>Jeans</p>
+            <div class="space-y-1 py-4">
+                <label class="pl-2 text-sm font-bold text-slate-600 dark:text-slate-200">
+                    Sizes
+                </label>
+                <div class="flex flex-row flex-wrap gap-1">
+                <button class="grid h-10 w-10 place-items-center rounded-md bg-purple-500 text-white">
+                    XS
+                </button>
+                <button class="grid h-10 w-10 place-items-center rounded-md bg-purple-500 text-white">
+                    SM
+                </button>
+                <button class="grid h-10 w-10 place-items-center rounded-md bg-purple-500 text-white">
+                    MD
+                </button>
+                <button class="grid h-10 w-10 place-items-center rounded-md bg-purple-500 text-white">
+                    LG
+                </button>
+                <button class="grid h-10 w-10 place-items-center rounded-md bg-purple-500 text-white">
+                    XL
+                </button>
                 </div>
             </div>
-            <div class="mt-4 mb-6">
-                <h2 class="font-bold text-slate-800 text-3xl truncate">Denim Pants</h2>
-                <p class="text-slate-600">Straight Fit Flex Stretch Jeans</p>
-                <div data-content="Badge" class="tooltip bottom">
-                    <p class="badge info mt-2">$77.00</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <div class="pb-6 flex flex-col">
-        <p class="text-xs text-slate-500 mb-2 font-semibold">Sizes</p>
-        <div data-content="Button Group" class="tooltip top">
-            <div class="button_group pill">
-                <button class="button secondary icon">
-                XS
-                </button>
-                <button class="button secondary icon">
-                S
-                </button>
-                <button class="button secondary icon">
-                M
-                </button>
-                <button class="button secondary icon">
-                L
-                </button>
-                <button class="button secondary icon">
-                XL
-                </button>
-            </div>
-        </div>
-        </div>
-        <div data-content="Button Group" class="tooltip top w-full">
-            <div class="button_group pill w-full">
-                <button class="button full">
+            <div class="flex w-full flex-row flex-nowrap gap-1">
+                <button class="block w-full rounded-md bg-purple-500 px-4 py-2 text-base font-medium text-white transition-all hover:bg-purple-500 hover:ring-4 hover:ring-purple-300/30">
                     Add to Cart
                 </button>
-                <button class="button icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                    </svg>
+                <button class="grid h-10 w-10 flex-none place-items-center rounded-md bg-purple-500 text-white">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="h-6 w-6"
+                >
+                    <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+                </svg>
                 </button>
             </div>
         </div>
     </div>
-    </div>
-    <div class="h-60 md:h-full md:w-2/5 relative">
-    <div class="badge success top-2 right-2 absolute">New!</div>
-    <img alt="Product imagine for jeans" class="w-full h-full object-cover" src="https://images.pexels.com/photos/4960250/pexels-photo-4960250.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+    <div class="relative h-60 md:h-full md:w-2/5">
+        <div class="absolute top-2 right-2 rounded-full bg-green-100 px-4 py-1 text-sm font-medium text-green-600">
+            Sale
+        </div>
+        <img
+            alt="Product imagine for jeans"
+            class="h-full w-full object-cover"
+            src="https://images.pexels.com/photos/4960250/pexels-photo-4960250.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        />
     </div>
 </div>
 ```

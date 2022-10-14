@@ -7,35 +7,86 @@ date: 3 October 2022
 
 # Notifications
 
-## Sizes
+## Types
 
 ```html-preview
-<div class="notification">Standard notification</div>
-<div class="notification toast">Toast notification</div>
+<!-- Standard Notification -->
+<div class="w-full rounded-md bg-purple-300/20 p-4 text-base font-medium text-purple-600 dark:text-purple-300">
+  Standard Full Width Notification
+</div>
+
+<!-- Smaller Toast Notification -->
+<div class="max-w-[24rem] w-full rounded-md bg-purple-300/20 p-4 text-base font-medium text-purple-600 dark:text-purple-300">
+  Toast Notification
+</div>
 ```
 
-## Styles
+## Types
 
 ```html-preview
-<div class="notification">Standard</div>
-<div class="notification success">Success</div>
-<div class="notification warning">Warning</div>
-<div class="notification emergency">Emergency</div>
+<!-- Standard Notification -->
+<div class="w-full rounded-md bg-purple-300/20 p-4 text-base font-medium text-purple-600 dark:text-purple-300">
+  Standard Full Width Notification
+</div>
+
+<!-- Success Notification -->
+<div class="w-full rounded-md bg-green-300/20 p-4 text-base font-medium text-green-600 dark:text-green-300">
+  Success Notification
+</div>
+
+<!-- Warning Notification -->
+<div class="w-full rounded-md bg-amber-300/20 p-4 text-base font-medium text-amber-600 dark:text-amber-300">
+  Warning Notification
+</div>
+
+<!-- Emergency Notification -->
+<div class="w-full rounded-md bg-rose-300/20 p-4 text-base font-medium text-rose-600 dark:text-rose-300">
+  Emergency Notification
+</div>
 ```
 
 ## With Icons
 
 ```html-preview
-<div class="notification warning">
-  <p>Icon After</p>
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-  </svg>
+<!-- Notification with icon after text -->
+<div class="grid w-full grid-cols-12 gap-2 rounded-md bg-amber-300/20 p-4 text-base font-medium text-amber-600 dark:text-amber-300">
+  <span class="col-span-11 break-words">
+    Warning Notification With Icon After Text
+  </span>
+  <span class="col-span-1 grid h-full w-full place-items-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      class="h-5 w-5"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </span>
 </div>
-<div class="notification emergency">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-  </svg>
-  <p>Icon Before</p>
+
+<!-- Notification with icon before text -->
+<div class="grid w-full grid-cols-12 gap-2 rounded-md bg-amber-300/20 p-4 text-base font-medium text-amber-600 dark:text-amber-300">
+  <span class="col-span-1 grid h-full w-full place-items-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      class="h-5 w-5"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </span>
+  <span class="col-span-11 break-words">
+    Warning Notification With Icon Before Text
+  </span>
 </div>
 ```
