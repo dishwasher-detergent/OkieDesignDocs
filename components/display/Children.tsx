@@ -4,7 +4,7 @@ import PreviewFolder from "../preview/PreviewFolder";
 import { useRouter } from "next/router";
 
 interface DocProps {
-  breadcrumb: boolean;
+  breadcrumb?: boolean;
   data: {
     slug: string;
     content: any;
