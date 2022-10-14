@@ -12,7 +12,6 @@ module.exports = {
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/line-clamp"),
-    require('okiedesign'),
     require("@tailwindcss/forms")
   ],
   future: {
