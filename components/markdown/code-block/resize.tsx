@@ -32,11 +32,21 @@ const Responsive = ({ children, size, dark }: ResponsiveProps) => {
                         }
                     </script>
                     <style>
+                        * {
+                          font-family: 'Nunito', sans-serif;
+                        }
+
                         a {
-                            cursor: pointer;
+                          cursor: pointer;
                         }
                     </style>
-                </head>
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link
+                      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+                      rel="stylesheet"
+                    />                
+                  </head>
                 <body
                     onLoad="removeLink();"
                     style="height: min-content;"
