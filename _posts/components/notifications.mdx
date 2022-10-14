@@ -53,11 +53,11 @@ date: 3 October 2022
 
 ```html-preview
 <!-- Notification with icon after text -->
-<div class="grid w-full grid-cols-12 gap-2 rounded-md bg-amber-300/20 p-4 text-base font-medium text-amber-600 dark:text-amber-300">
-  <span class="col-span-11 break-words">
-    Warning Notification With Icon After Text
-  </span>
-  <span class="col-span-1 grid h-full w-full place-items-center">
+<div class="flex w-full flex-row gap-4 rounded-md bg-amber-300/20 p-4 text-base font-medium text-amber-600 dark:text-amber-300">
+  <p class="whitespace-normal break-all flex-1 w-full">
+    Warning Notification With Icon After
+  </p>
+  <span class="grid place-items-start flex-none">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -74,8 +74,8 @@ date: 3 October 2022
 </div>
 
 <!-- Notification with icon before text -->
-<div class="grid w-full grid-cols-12 gap-2 rounded-md bg-amber-300/20 p-4 text-base font-medium text-amber-600 dark:text-amber-300">
-  <span class="col-span-1 grid h-full w-full place-items-center">
+<div class="flex w-full flex-row gap-4 rounded-md bg-amber-300/20 p-4 text-base font-medium text-amber-600 dark:text-amber-300">
+  <span class="grid place-items-start flex-none">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -89,8 +89,8 @@ date: 3 October 2022
       />
     </svg>
   </span>
-  <span class="col-span-11 break-words">
-    Warning Notification With Icon Before Text
-  </span>
+  <p class="whitespace-normal break-all flex-1 w-full">
+    Warning Notification With Icon After
+  </p>
 </div>
 ```
