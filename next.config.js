@@ -1,23 +1,12 @@
 // /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
+  basePath: process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL,
+  assetPrefix: process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL,
   images: {
-    domains: [
-      "images.unsplash.com",
-      "images.pexels.com",
-      "miro.medium.com",
-      "/images",
-    ],
+    domains: ["/images"],
     loader: "custom",
     disableStaticImages: true,
-  },
-  webpack: function (config, { isServer }) {
-    if (isServer) {
-      require("./scripts/sitemap-generator");
-    }
-    return config;
   },
 };
 module.exports = nextConfig;

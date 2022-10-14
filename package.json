@@ -4,11 +4,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/sitemap-generator.js",
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "serve": "next serve",
-    "deploy": "gh-pages -d out -t true"
+    "serve": "next serve"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.2",
