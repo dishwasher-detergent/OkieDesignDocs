@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="relative z-20 mx-auto max-w-6xl py-12 px-6 md:py-24">
+      <section className="relative mx-auto max-w-6xl py-12 px-6 md:py-24">
         <h1 className="carena 2xl:px-30 mb-4 text-5xl font-bold text-slate-900 dark:text-white md:text-6xl lg:mb-8 lg:text-center lg:leading-tight">
           Create the beautiful website you've always wanted.
         </h1>
