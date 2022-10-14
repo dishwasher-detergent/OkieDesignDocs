@@ -1,11 +1,5 @@
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
-const customLoader = ({ src }: any) => {
-  return src;
-};
 
 const Logo = () => {
   const [fallbackImage, setFallbackImage] = useState(false);

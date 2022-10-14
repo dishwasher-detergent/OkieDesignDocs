@@ -1,7 +1,6 @@
 import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
 import DisplayChildren from "../../components/display/Children";
-import Layout from "../../components/layout/Layout";
 import Loading from "../../components/loading";
 
 const Docs = () => {
