@@ -6,64 +6,19 @@ date: 3 October 2022
 position: 1
 ---
 
-<div class="not-prose mb-12 grid w-full grid-cols-12 gap-2 rounded-md bg-rose-300/20 p-4 text-base font-medium text-rose-600 dark:text-rose-300">
-  <span class="col-span-1 grid h-full w-full place-items-center">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="h-6 w-6"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-      />
-    </svg>
-  </span>
-  <span class="col-span-11 break-words">
-    OkieDesign's NPM package is no-longer support. We have moved to inline
-    tailwind styles.
-  </span>
-</div>
+# Getting Started
 
-# Getting Started - Depricated
+## Install
 
-## Installation
+Install [tailwindcss](https://tailwindcss.com/docs/installation)
 
 ```js
-npm i okiedesign
+npm install -D tailwindcss
+npx tailwindcss init
 ```
 
-## Adding to Tailwind Config
+Install [@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms)
 
 ```js
-module.exports = {
-  ...
-  plugins: [
-      require('okiedesign'),
-  ],
-  ...
-}
-```
-
-## Color Customization
-
-```js
-const colors = require("tailwindcss/colors");
-
-module.exports = {
-  ...
-  theme: {
-    colors: {
-      primary: colors.purple,
-      success: colors.emerald,
-      warning: colors.amber,
-      emergency: colors.red,
-    },
-  },
-  ...
-}
+npm install -D @tailwindcss/forms
 ```
