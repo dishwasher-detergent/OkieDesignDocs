@@ -19,7 +19,7 @@ const Logo = () => {
             </svg>
           </span>
         )}
-        <span className="hidden md:inline-block">
+        <span className="carena hidden md:inline-block">
           {process.env.NEXT_PUBLIC_PROJECT_NAME}
         </span>
       </a>

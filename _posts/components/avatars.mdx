@@ -1,0 +1,109 @@
+---
+title: "Avatar"
+description: "Avatar styling"
+tags: ["Avatar"]
+date: 14 October 2022
+banner: "/images/components/avatars.png"
+---
+
+# Avatar
+
+## Standard
+
+```html-preview
+<!-- Rounded Avatar -->
+<div class="h-16 w-16 overflow-hidden rounded-full border-4 border-white dark:border-slate-900">
+    <img
+        class="w-full object-cover"
+        src="https://images.unsplash.com/photo-1604336732494-d8386c7029e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fit=crop&h=200&q=50"
+    />
+</div>
+```
+
+## Types
+
+```html-preview
+<!-- Square Avatar -->
+<div class="h-16 w-16 overflow-hidden rounded-md border-4 border-white dark:border-slate-900">
+    <img
+        class="w-full object-cover"
+        src="https://images.unsplash.com/photo-1604336732494-d8386c7029e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fit=crop&h=200&q=50"
+    />
+</div>
+```
+
+## Grouped
+
+```html-preview
+<!-- Grouped Rounded -->
+<div class="flex flex-row -space-x-8 hover:-space-x-2">
+    <div class="h-16 w-16 overflow-hidden rounded-full border-4 border-white dark:border-slate-900">
+        <img
+            class="w-full object-cover"
+            src="https://images.unsplash.com/photo-1604336732494-d8386c7029e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fit=crop&h=200&q=50"
+        />
+    </div>
+    <div class="h-16 w-16 overflow-hidden rounded-full border-4 border-white dark:border-slate-900">
+        <img
+            class="w-full object-cover"
+            src="https://images.unsplash.com/photo-1604336732494-d8386c7029e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fit=crop&h=200&q=50"
+        />
+    </div>
+    <div class="h-16 w-16 overflow-hidden rounded-full border-4 border-white dark:border-slate-900">
+        <img
+            class="w-full object-cover"
+            src="https://images.unsplash.com/photo-1604336732494-d8386c7029e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fit=crop&h=200&q=50"
+        />
+    </div>
+    <div class="h-16 w-16 overflow-hidden rounded-full border-4 border-white dark:border-slate-900">
+        <img
+            class="w-full object-cover"
+            src="https://images.unsplash.com/photo-1604336732494-d8386c7029e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fit=crop&h=200&q=50"
+        />
+    </div>
+</div>
+
+<!-- Grouped Square -->
+<div class="flex flex-row -space-x-8 hover:-space-x-2">
+    <div class="h-16 w-16 overflow-hidden rounded-md border-4 border-white dark:border-slate-900">
+        <img
+            class="w-full object-cover"
+            src="https://images.unsplash.com/photo-1604336732494-d8386c7029e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fit=crop&h=200&q=50"
+        />
+    </div>
+    <div class="h-16 w-16 overflow-hidden rounded-md border-4 border-white dark:border-slate-900">
+        <img
+            class="w-full object-cover"
+            src="https://images.unsplash.com/photo-1604336732494-d8386c7029e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fit=crop&h=200&q=50"
+        />
+    </div>
+    <div class="h-16 w-16 overflow-hidden rounded-md border-4 border-white dark:border-slate-900">
+        <img
+            class="w-full object-cover"
+            src="https://images.unsplash.com/photo-1604336732494-d8386c7029e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fit=crop&h=200&q=50"
+        />
+    </div>
+    <div class="h-16 w-16 overflow-hidden rounded-md border-4 border-white dark:border-slate-900">
+        <img
+            class="w-full object-cover"
+            src="https://images.unsplash.com/photo-1604336732494-d8386c7029e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fit=crop&h=200&q=50"
+        />
+    </div>
+</div>
+```
+
+## With Badge
+
+```html-preview
+<div class="relative h-16 w-16">
+    <div class="absolute top-0 left-[calc(100%-1.5rem)] whitespace-nowrap rounded-full bg-rose-100 px-1.5 py-0.5 text-xs font-bold text-rose-600 dark:bg-rose-600 dark:text-white">
+        99+
+    </div>
+    <div class="h-full w-full overflow-hidden rounded-full border-4 border-white dark:border-slate-900">
+        <img
+            class="w-full object-cover"
+            src="https://images.unsplash.com/photo-1604336732494-d8386c7029e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fit=crop&h=200&q=50"
+        />
+    </div>
+</div>
+```
