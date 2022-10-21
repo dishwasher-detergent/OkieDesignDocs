@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import corndocsConfig from "../../../corndocs.config";
 
 const Logo = () => {
   const [fallbackImage, setFallbackImage] = useState(false);
@@ -20,7 +21,7 @@ const Logo = () => {
           </span>
         )}
         <span className="carena hidden md:inline-block">
-          {process.env.NEXT_PUBLIC_PROJECT_NAME}
+          {corndocsConfig.project.name}
         </span>
       </a>
     </Link>

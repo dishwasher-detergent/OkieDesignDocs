@@ -1,19 +1,18 @@
-import { NextSeo } from "next-seo";
 import dynamic from "next/dynamic";
 import { MDXProvider } from "@mdx-js/react";
 import CodeBlock from "../markdown/code-block";
 import { H2, H3, H4 } from "../markdown/heading";
 import Breadcrumb from "../breadcrumb/breadcrumb";
 import { useRouter } from "next/router";
-import Loading from "../loading";
 import ArticleNavigation from "../layout/docs/article/navigation";
 import ArticleSidebar from "../layout/docs/article/sidebar";
 import ArticleFooter from "../layout/docs/article/footer";
+import corndocsConfig from "../../corndocs.config";
+import { motion, AnimatePresence } from "framer-motion";
 
 const DynamicDocument = (c: any) =>
   dynamic(() => import(`../../_posts/${c}.mdx`), {
     ssr: false,
-    loading: Loading,
   });
 
 interface DocProps {
@@ -38,6 +37,12 @@ const components = {
   pre: CodeBlock,
 };
 
+const variants = {
+  hidden: { opacity: 1 },
+  enter: { opacity: 1 },
+  exit: { opacity: 1 },
+};
+
 const DisplayDoc = ({ data }: DocProps) => {
   const { custom } = data;
 
@@ -45,36 +50,15 @@ const DisplayDoc = ({ data }: DocProps) => {
   const router = useRouter();
 
   return (
-    <>
-      <NextSeo
-        title={`${custom.data.title} | ${process.env.NEXT_PUBLIC_PROJECT_NAME}`}
-        canonical={`${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}/${custom.slug}`}
-        description={custom.data.description}
-        openGraph={{
-          title: `${custom.data.title} | ${process.env.NEXT_PUBLIC_PROJECT_NAME}`,
-          url: `${process.env.NEXT_PUBLIC_PRODUCTION_ROOT_URL}/Docs/${custom.path}`,
-          description: custom.data.description,
-          type: "article",
-          images: [
-            {
-              url: custom.data.banner,
-              width: 800,
-              height: 600,
-              alt: custom.data.title,
-              type: "image/jpeg",
-            },
-            {
-              url: custom.data.banner,
-              width: 900,
-              height: 800,
-              alt: custom.data.title,
-              type: "image/jpeg",
-            },
-          ],
-          site_name: `${process.env.NEXT_PUBLIC_PROJECT_NAME}'s Documentation`,
-        }}
-      />
-      <div className="pl-2">
+    <AnimatePresence>
+      <motion.div
+        variants={variants}
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        transition={{ duration: 0.75, type: "spring" }}
+        className="pl-2"
+      >
         <main className="dark:bg-slate-900">
           <div className="container mx-auto py-6">
             <div className="grid grid-cols-12 gap-4">
@@ -98,13 +82,11 @@ const DisplayDoc = ({ data }: DocProps) => {
             </div>
           </div>
           <ArticleFooter>
-            {process.env.NEXT_PUBLIC_GITHUB_URL ? (
+            {corndocsConfig.project.github.repo ? (
               <a
                 target="_blank"
-                href={`${process.env.NEXT_PUBLIC_GITHUB_URL}/edit/${
-                  process.env.NEXT_PUBLIC_GITHUB_BRANCH
-                    ? process.env.NEXT_PUBLIC_GITHUB_BRANCH
-                    : "main"
+                href={`${corndocsConfig.project.github.repo}/edit/${
+                  corndocsConfig.project.github.usesMain ? "main" : "master"
                 }/_posts/${custom.path}.mdx`}
               >
                 Edit on GitHub
@@ -112,8 +94,8 @@ const DisplayDoc = ({ data }: DocProps) => {
             ) : null}
           </ArticleFooter>
         </main>
-      </div>
-    </>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
