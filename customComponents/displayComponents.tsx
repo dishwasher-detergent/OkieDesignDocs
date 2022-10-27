@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import DisplayChildren from "../../components/display/Children";
+import DisplayChildren from "../components/display/Children";
 import NProgress from "nprogress";
 
-const Docs = () => {
+const DisplayComponents = () => {
   const [data, setData] = useState<any>([]);
   const [isLoading, setLoading] = useState(true);
 
@@ -29,4 +29,4 @@ const Docs = () => {
   return <>{!isLoading && <DisplayChildren data={data} />}</>;
 };
 
-export default Docs;
+export default DisplayComponents;

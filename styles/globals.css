@@ -22,6 +22,34 @@
   height: 100%;
 }
 
+.griddy {
+  background-size: 40px 40px;
+  background-image: linear-gradient(
+      to right,
+      theme(backgroundColor.slate.300) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      theme(backgroundColor.slate.300) 1px,
+      transparent 1px
+    );
+}
+
+.dark .griddy {
+  background-size: 40px 40px;
+  background-image: linear-gradient(
+      to right,
+      theme(backgroundColor.slate.700) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      theme(backgroundColor.slate.700) 1px,
+      transparent 1px
+    );
+}
+
 .dotty {
   background-size: 20px 20px;
   background-image: radial-gradient(
@@ -35,7 +63,11 @@
   background-size: 20px 20px;
   background-image: radial-gradient(
     circle,
-    theme(backgroundColor.slate.800) 1px,
+    theme(backgroundColor.slate.700) 1px,
     transparent 1px
   );
+}
+
+.ais-Highlight-highlighted {
+  @apply not-italic text-primary-500;
 }

@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   // purge: ["./**/*.tsx"],
@@ -20,7 +20,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.purple,
+        primary: colors.violet,
       },
     },
   },

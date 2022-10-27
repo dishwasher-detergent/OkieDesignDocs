@@ -1,0 +1,18 @@
+@font-face {
+  font-family: Carena;
+  src: url(../public/fonts/Carena-Regular.otf);
+}
+
+@font-face {
+  font-family: Basteleur;
+  src: url(../public/fonts/Basteleur-Bold.otf);
+}
+
+.carena {
+  font-family: "Carena", serif;
+}
+
+.basteleur,
+.basteleur * {
+  font-family: "Basteleur", serif;
+}
