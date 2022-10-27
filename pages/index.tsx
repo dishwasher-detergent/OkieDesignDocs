@@ -43,12 +43,9 @@ const Home = () => {
   const DocumentContent = DynamicComponent(data.children.custom.truePath);
 
   return (
-    <article>
-      {/* @ts-ignore */}
-      <MDXProvider>
-        <DocumentContent />
-      </MDXProvider>
-    </article>
+    <MDXProvider>
+      <DocumentContent />
+    </MDXProvider>
   );
 };
 
