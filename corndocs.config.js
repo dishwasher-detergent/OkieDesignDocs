@@ -1,8 +1,9 @@
+/** @type {import('./types/ConfigType').Config} */
+
 const config = {
   darkMode: true,
   googleAnalytics: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY,
   search: {
-    enabled: true,
     algolia_admin_key: process.env.ALGOLIA_SEARCH_ADMIN_KEY,
     algolia_app_id: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
     algolia_search_api_key: process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY,
@@ -11,6 +12,7 @@ const config = {
   project: {
     name: "OkieDesign",
     url: "https://www.okie.design",
+    homePage: "index",
     github: {
       repo: "https://github.com/dishwasher-detergent/OkieDesignDocs",
       usesMain: true,
