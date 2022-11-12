@@ -44,7 +44,9 @@ const DisplayComponents = () => {
           </Link>
         </div>
       </section>
-      <section>{!isLoading && <DisplayChildren data={data} />}</section>
+      <section className="not-prose">
+        {!isLoading && <DisplayChildren data={data} breadcrumb={false} />}
+      </section>
     </>
   );
 };

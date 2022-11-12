@@ -21,7 +21,7 @@ const ArticleSidebar = ({ data, children }: any) => {
         <div className="hidden lg:block">
           <div className="space-y-8 py-8 lg:py-0">
             <div className="px-8">
-              <p className="w-full rounded-md pb-2 font-bold text-primary-500">
+              <p className="w-full rounded-xl pb-2 font-bold text-primary-500">
                 On this page
               </p>
               <nav className="dark:text-white lg:text-sm lg:leading-6">
@@ -56,7 +56,7 @@ const ArticleSidebar = ({ data, children }: any) => {
   ) : (
     <Disclosure
       as="div"
-      className="mb-4 overflow-hidden rounded-md border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+      className="mb-4 overflow-hidden rounded-xl border border-slate-300 bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
     >
       {({ open }) => (
         <>
@@ -99,9 +99,6 @@ const ArticleSidebar = ({ data, children }: any) => {
               })}
             </ul>
             {children}
-            <div className="griddy absolute top-0 left-0 right-0 z-0 h-24 opacity-50">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-slate-900" />
-            </div>
           </Disclosure.Panel>
         </>
       )}

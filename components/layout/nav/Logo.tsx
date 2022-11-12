@@ -7,7 +7,7 @@ const customLoader = ({ src }: any) => {
 };
 
 const Logo = () => {
-  const { logo }: any = corndocsConfig.project;
+  const { logo } = corndocsConfig.project;
   return (
     <Link href="/">
       <a className="flex h-full cursor-pointer items-center justify-start gap-2 text-xl font-black">
@@ -19,12 +19,12 @@ const Logo = () => {
               objectPosition="center"
               src={logo.src}
               alt={logo.alt}
-              width={logo.size[0] ? logo.size[0] : 80}
-              height={logo.size[1] ? logo.size[1] : 40}
+              width={logo?.size?.[0] ? logo.size[0] : 80}
+              height={logo?.size?.[1] ? logo.size[1] : 40}
             />
           </span>
         )}
-        <span className="basteleur hidden md:inline-block">
+        <span className="hidden md:inline-block">
           {corndocsConfig.project.name}
         </span>
       </a>

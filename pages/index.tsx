@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import NProgress from "nprogress";
 import dynamic from "next/dynamic";
-import Loading from "../components/loading";
 import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
 
@@ -37,15 +36,18 @@ const Home = () => {
   }, [isLoading]);
 
   if (isLoading) {
-    return <Loading />;
+    return null;
   }
 
   const DocumentContent = DynamicComponent(data.children.custom.truePath);
 
   return (
-    <MDXProvider>
-      <DocumentContent />
-    </MDXProvider>
+    <article className="prose prose-slate w-full max-w-none pt-8 dark:prose-invert">
+      {/* @ts-ignore */}
+      <MDXProvider>
+        <DocumentContent />
+      </MDXProvider>
+    </article>
   );
 };
 

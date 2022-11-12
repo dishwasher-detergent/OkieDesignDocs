@@ -8,10 +8,11 @@ interface ProviderProps {
 }
 
 const SidebarProvider = ({ children }: ProviderProps) => {
-  const [sidebar, setSidebar] = useState(false);
-  const toggleSidebar = () => {
-    setSidebar(!sidebar);
-  };
+  const [sidebar, setSidebar] = useState<boolean>(false);
+  function toggleSidebar() {
+    if (arguments.length > 0) setSidebar(arguments[0]);
+    else setSidebar(!sidebar);
+  }
   return (
     <SidebarContext.Provider value={{ sidebar, toggleSidebar }}>
       {children}

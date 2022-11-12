@@ -5,6 +5,7 @@ import { TypeDocsDetails } from "../../../types/TypeDocsDetails";
 import { useContext } from "react";
 import { SidebarContext } from "../../../context/SidebarContext";
 import { useRouter } from "next/router";
+import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
 interface ButtonProps {
   data: any;
@@ -14,11 +15,12 @@ interface ButtonProps {
 const Button = ({ data, children }: ButtonProps) => {
   /* @ts-ignore */
   const { sidebar, toggleSidebar } = useContext(SidebarContext);
+  const { height, width } = useWindowDimensions();
   const router = useRouter();
 
   const Route = (data: string) => {
     if (data) {
-      toggleSidebar();
+      if (width < 1024) toggleSidebar(false);
       router.push(`/Docs/${data}`);
     }
   };
@@ -27,7 +29,7 @@ const Button = ({ data, children }: ButtonProps) => {
     <li>
       <a
         onClick={() => Route(data.custom.path)}
-        className="flex cursor-pointer flex-row flex-nowrap items-center gap-2 truncate rounded-md px-3 py-1.5 font-bold hover:bg-slate-100 dark:hover:bg-slate-800"
+        className="flex cursor-pointer flex-row flex-nowrap items-center gap-2 truncate rounded-xl px-3 py-1.5 font-bold hover:bg-slate-100 dark:hover:bg-slate-800"
       >
         {children}
       </a>
@@ -39,7 +41,7 @@ const Button = ({ data, children }: ButtonProps) => {
           <>
             <Disclosure.Button
               as="li"
-              className={`flex cursor-pointer flex-row flex-nowrap items-center gap-2 truncate rounded-md px-3 py-1.5 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 ${
+              className={`flex cursor-pointer flex-row flex-nowrap items-center gap-2 truncate rounded-xl px-3 py-1.5 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 ${
                 open && "bg-slate-100 dark:bg-slate-800"
               }`}
             >
@@ -61,7 +63,7 @@ const Button = ({ data, children }: ButtonProps) => {
                     <li key={index}>
                       <a
                         onClick={() => Route(item.custom.path)}
-                        className="flex cursor-pointer flex-row flex-nowrap items-center justify-start gap-2 truncate rounded-md px-3 py-1.5 font-bold hover:bg-slate-100 dark:hover:bg-slate-800"
+                        className="flex cursor-pointer flex-row flex-nowrap items-center justify-start gap-2 truncate rounded-xl px-3 py-1.5 font-bold hover:bg-slate-100 dark:hover:bg-slate-800"
                       >
                         <span>{item.custom.data.title}</span>
                       </a>
