@@ -22,6 +22,18 @@ const config = {
     //   alt: "OkieDesign Logo",
     //   size: [40, 40],
     // },
+    mainScreen: {
+      showSearch: true,
+      showSelection: true,
+      homePage: {
+        custom: {
+          path: "index",
+        },
+        title: "Build documentation that will impress your friends and family.",
+        tagLine:
+          "CornDocs lets you easily create documentation to show off your projects!",
+      },
+    },
   },
 };
 

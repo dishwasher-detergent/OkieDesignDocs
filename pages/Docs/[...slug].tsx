@@ -1,36 +1,38 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import DisplayChildren from "../../components/display/Children";
-import DisplayDoc from "../../components/display/Doc";
-import NProgress from "nprogress";
+import corndocsConfig from "#/corndocs.config";
+import { getPostSlugs } from "#/scripts/paths-generator";
+import Article from "#/ui/display/article/Article";
+import Selection from "#/ui/display/selection/Selection";
+import { NextSeo } from "next-seo";
+import React from "react";
+import { getCertainPost } from "../api/article/[...slug]";
 
-function Doc() {
-  const router = useRouter();
-  const [data, setData] = useState<any>({});
-  const [isLoading, setLoading] = useState(true);
+export async function getStaticPaths() {
+  const paths = await getPostSlugs();
 
-  useEffect(() => {
-    if (router.query.slug) {
-      setLoading(true);
-      fetch(`/api/posts/${(router.query.slug as string[]).join("/")}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setData(data);
-          setLoading(false);
-        });
-    }
-  }, [router]);
+  return {
+    paths: paths,
+    fallback: false,
+  };
+}
 
-  useEffect(() => {
-    NProgress.configure({ showSpinner: false });
+export async function getStaticProps(context: { params: { slug: string[] } }) {
+  const slug = context.params.slug;
+  const data = await getCertainPost(slug.join("/"));
 
-    if (isLoading) {
-      NProgress.start();
-    } else {
-      NProgress.done();
-    }
-  }, [isLoading]);
+  return {
+    props: {
+      slug: slug.join("/"),
+      data: data,
+    },
+  };
+}
 
+interface Props {
+  slug: string;
+  data: any;
+}
+
+function Doc({ data, slug }: Props) {
   if (!data) {
     return (
       <div className="flex h-full w-full flex-col items-center justify-center gap-4 py-16">
@@ -40,8 +42,7 @@ function Doc() {
         <div className="text-center text-xl text-slate-900 dark:text-white">
           <p>
             Looks like the documentation for{" "}
-            <span className="font-bold">{router.query.slug}</span> is nowhere to
-            be found!
+            <span className="font-bold">{slug}</span> is nowhere to be found!
           </p>
           <p>Try looking for something else.</p>
         </div>
@@ -51,12 +52,33 @@ function Doc() {
 
   return (
     <>
-      {!isLoading &&
-        (data.children ? (
-          <DisplayChildren data={data} />
-        ) : (
-          <DisplayDoc data={data} />
-        ))}
+      <NextSeo
+        title={`${data.metadata.title}${
+          data.children
+            ? ` ( ${data.children.length} ${
+                data.children.length > 1 ? "sub-items" : "sub-item"
+              } )`
+            : ""
+        }`}
+        description={data.metadata.description}
+        openGraph={{
+          url: corndocsConfig.project.url + data.path,
+          title: data.metadata.title,
+          description: data.metadata.description,
+          images: [
+            {
+              url: `${data.metadata.banner ? `${data.metadata.banner}` : ""}`,
+              alt: data.metadata.description,
+            },
+          ],
+          siteName: corndocsConfig.project.name,
+        }}
+      />
+      {data.children ? (
+        <Selection data={data.children} />
+      ) : (
+        <Article data={data} />
+      )}
     </>
   );
 }

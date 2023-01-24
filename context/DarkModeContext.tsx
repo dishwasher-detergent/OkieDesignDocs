@@ -8,7 +8,7 @@ interface ProviderProps {
 }
 
 const DarkmodeProvider = ({ children }: ProviderProps) => {
-  const [darkmode, setDarkmode] = useState(true);
+  const [darkmode, setDarkmode] = useState(false);
   const toggleDarkmode = () => {
     setDarkmode(!darkmode);
     const localDark = !darkmode;

@@ -48,9 +48,14 @@ interface PreviewProps {
   description: string;
 }
 
-const Layout = ({ children, path, title, description }: PreviewProps) => {
+export default function Layout({
+  children,
+  path,
+  title,
+  description,
+}: PreviewProps) {
   return (
-    <Link href={`/Docs${path}`} passHref>
+    <Link href={`/Docs${path}`} passHref legacyBehavior>
       <motion.div
         initial="initial"
         whileHover="hover"
@@ -59,13 +64,13 @@ const Layout = ({ children, path, title, description }: PreviewProps) => {
       >
         <motion.div
           variants={mainImage}
-          className="relative h-1/2 w-full overflow-hidden rounded-xl border border-slate-300 bg-slate-100 dark:border-slate-800 dark:bg-slate-800"
+          className="relative h-1/2 w-full overflow-hidden rounded-xl border border-slate-300 bg-slate-200/70 dark:border-slate-700 dark:bg-slate-800/50"
         >
           {children}
         </motion.div>
         <motion.div
           variants={mainTextContainer}
-          className="absolute bottom-0 rounded-xl bg-white/90 px-4 py-2 backdrop-blur-md dark:bg-slate-900/90"
+          className="absolute bottom-0 rounded-xl px-4 py-2 backdrop-blur-md md:bg-white/90 md:dark:bg-slate-900/90"
         >
           <motion.h3
             variants={mainText}
@@ -83,6 +88,4 @@ const Layout = ({ children, path, title, description }: PreviewProps) => {
       </motion.div>
     </Link>
   );
-};
-
-export default Layout;
+}

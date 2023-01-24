@@ -19,6 +19,7 @@
 }
 
 .griddy {
+  margin-top: -1px;
   background-size: 40px 40px;
   background-image: linear-gradient(
       to right,
@@ -61,6 +62,15 @@
     circle,
     theme(backgroundColor.slate.700) 1px,
     transparent 1px
+  );
+}
+
+.radial {
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    theme(backgroundColor.primary.500) 0%,
+    transparent 70%
   );
 }
 

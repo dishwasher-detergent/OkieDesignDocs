@@ -1,9 +1,9 @@
 import Document, {
-  Html,
+  DocumentContext,
   Head,
+  Html,
   Main,
   NextScript,
-  DocumentContext,
 } from "next/document";
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<any> {
@@ -25,10 +25,6 @@ class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
             rel="stylesheet"
-          />
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css"
           />
         </Head>
         <body className="h-screen text-slate-900 dark:text-white">
