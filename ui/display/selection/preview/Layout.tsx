@@ -64,7 +64,7 @@ export default function Layout({
       >
         <motion.div
           variants={mainImage}
-          className="relative h-1/2 w-full overflow-hidden rounded-xl border border-slate-300 bg-slate-200/70 dark:border-slate-700 dark:bg-slate-800/50"
+          className="relative h-1/2 w-full overflow-hidden rounded-xl border border-slate-300 bg-slate-200/70 dark:border-slate-700 dark:bg-slate-800/50 dark:brightness-75"
         >
           {children}
         </motion.div>
