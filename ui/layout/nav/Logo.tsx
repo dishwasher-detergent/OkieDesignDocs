@@ -1,9 +1,14 @@
 import corndocsConfig from "#/corndocs.config.js";
 import Image from "next/image";
 import Link from "next/link";
+import { DarkmodeContext } from "#/context/darkmodeContext";
+import { useContext } from "react";
 
 export default function Logo() {
   const { logo } = corndocsConfig.project;
+  /* @ts-ignore */
+  const { darkmode } = useContext(DarkmodeContext);
+
   return (
     <Link
       href="/"
@@ -11,10 +16,10 @@ export default function Logo() {
     >
       <>
         {logo && (
-          <span className="logo relative h-10 overflow-hidden">
+          <span className="relative grid h-10 place-items-center overflow-hidden">
             <Image
               style={{ objectFit: "contain", objectPosition: "center" }}
-              src={logo.src}
+              src={darkmode && logo.darkMode ? logo.darkMode : logo.src}
               alt={logo.alt}
               width={logo?.size?.[0] ? logo.size[0] : 80}
               height={logo?.size?.[1] ? logo.size[1] : 40}

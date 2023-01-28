@@ -18,8 +18,9 @@ const config = {
     },
     logo: {
       src: "/static/logo.svg",
+      darkMode: "/static/logo_white.svg",
       alt: "OkieDesign Logo",
-      size: [40, 40],
+      size: [50],
     },
     mainScreen: {
       showSearch: true,
