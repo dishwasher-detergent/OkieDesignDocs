@@ -65,7 +65,7 @@ function Home({ data }: Props) {
           <Markdown article={data.content.markdown} />
         ) : (
           <>
-            <h1 className="2xl:px-30 mb-4 text-4xl font-black text-slate-900 dark:text-white md:text-6xl lg:mb-8 lg:text-center lg:leading-tight">
+            <h1 className="2xl:px-30 display mb-4 text-4xl font-black text-slate-900 dark:text-white md:text-6xl lg:mb-8 lg:text-center lg:leading-tight">
               {data.content.title}
             </h1>
             <p className="font-bold text-slate-600 dark:text-slate-100 lg:text-center lg:text-lg">

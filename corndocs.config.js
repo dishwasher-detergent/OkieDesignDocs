@@ -16,18 +16,15 @@ const config = {
       repo: "https://github.com/dishwasher-detergent/OkieDesignDocs",
       usesMain: true,
     },
-    // logo: {
-    //   src: "/static/logo.svg",
-    //   alt: "OkieDesign Logo",
-    //   size: [40, 40],
-    // },
+    logo: {
+      src: "/static/logo.svg",
+      alt: "OkieDesign Logo",
+      size: [40, 40],
+    },
     mainScreen: {
       showSearch: true,
       showSelection: true,
       homePage: {
-        custom: {
-          path: "index",
-        },
         title: "Build documentation that will impress your friends and family.",
         tagLine:
           "CornDocs lets you easily create documentation to show off your projects!",

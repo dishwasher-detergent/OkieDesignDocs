@@ -11,7 +11,7 @@ export default function Logo() {
   return (
     <Link
       href="/"
-      className="flex h-full cursor-pointer items-center justify-start gap-2 text-xl font-black"
+      className="display flex h-full cursor-pointer items-center justify-start gap-2 text-xl font-black"
     >
       <>
         {logo && (

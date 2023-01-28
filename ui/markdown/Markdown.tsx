@@ -19,10 +19,6 @@ const MdxComponents = {
   h2: H2,
   h3: H3,
   img: Images,
-  DisplayComponents: dynamic(async () => {
-    const component = await import("#/customComponents/main");
-    return component;
-  }),
 };
 
 async function cerealize(raw: string): Promise<Post> {
