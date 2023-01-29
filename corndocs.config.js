@@ -28,7 +28,7 @@ const config = {
       homePage: {
         title: "Create the beautiful website you've always dreamed of.",
         tagLine:
-          "Created with Tailwind and Love!",
+          "Responsive components created with Tailwind and Love!",
       },
     },
   },
