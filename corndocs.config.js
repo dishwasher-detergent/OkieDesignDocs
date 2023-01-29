@@ -26,9 +26,9 @@ const config = {
       showSearch: true,
       showSelection: true,
       homePage: {
-        title: "Build documentation that will impress your friends and family.",
+        title: "Create the beautiful website you've always dreamed of.",
         tagLine:
-          "CornDocs lets you easily create documentation to show off your projects!",
+          "Created with Tailwind and Love!",
       },
     },
   },
